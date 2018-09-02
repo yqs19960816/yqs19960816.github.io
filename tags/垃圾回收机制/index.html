@@ -17,9 +17,13 @@
   
   
     
+      
     
-  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
-  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
+    
+      
+    
+  <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+  <link href="//cdn.bootcss.com/pace/1.0.2/themes/blue/pace-theme-flash.min.css" rel="stylesheet">
 
 
 
@@ -57,15 +61,57 @@
 
   
   
-  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+    
+  
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+    
+    <link href="https://fonts.cat.net/css?family=Lato:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Roboto Mono:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
 
 
 
 
 
 
+  
 
-<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet" type="text/css" />
 
 <link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
 
@@ -85,31 +131,27 @@
 
 
 
-  <meta name="keywords" content="前端,数据类型转换,GC垃圾回收机制,深浅拷贝," />
-
-
-
-
-
-  <link rel="alternate" href="/atom.xml" title="Hide on bush's Blog" type="application/atom+xml" />
+  <meta name="keywords" content="Hexo, NexT,前端,Blog,搭建博客" />
 
 
 
 
 
 
-<meta name="description" content="JS有5种简单数据类型（也称基本数据类型）：undefined、null、Boolean、Number和String。还有两种复杂数据类型——symbol（不做多介绍）和Object，对象本质上是由一组无序的名值对组成的，ECMAScring不支持任何创建自定义类型的机制，而所有值最终都将是上述7种数据类型之一。">
-<meta name="keywords" content="前端,数据类型转换,GC垃圾回收机制,深浅拷贝">
-<meta property="og:type" content="article">
-<meta property="og:title" content="JS数据类型转换">
-<meta property="og:url" content="http://yoursite.com/2018/08/30/Js数据类型转换/index.html">
+
+
+
+
+<meta name="description" content="黑夜给了我黑色的眼睛，而我却用它寻找光明。">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Hide on bush&#39;s Blog">
+<meta property="og:url" content="http://yqs19960816.github.io/tags/垃圾回收机制/index.html">
 <meta property="og:site_name" content="Hide on bush&#39;s Blog">
-<meta property="og:description" content="JS有5种简单数据类型（也称基本数据类型）：undefined、null、Boolean、Number和String。还有两种复杂数据类型——symbol（不做多介绍）和Object，对象本质上是由一组无序的名值对组成的，ECMAScring不支持任何创建自定义类型的机制，而所有值最终都将是上述7种数据类型之一。">
+<meta property="og:description" content="黑夜给了我黑色的眼睛，而我却用它寻找光明。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-09-02T01:19:10.663Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="JS数据类型转换">
-<meta name="twitter:description" content="JS有5种简单数据类型（也称基本数据类型）：undefined、null、Boolean、Number和String。还有两种复杂数据类型——symbol（不做多介绍）和Object，对象本质上是由一组无序的名值对组成的，ECMAScring不支持任何创建自定义类型的机制，而所有值最终都将是上述7种数据类型之一。">
+<meta name="twitter:title" content="Hide on bush&#39;s Blog">
+<meta name="twitter:description" content="黑夜给了我黑色的眼睛，而我却用它寻找光明。">
 
 
 
@@ -119,7 +161,7 @@
     root: '/',
     scheme: 'Gemini',
     version: '5.1.4',
-    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    sidebar: {"position":"left","display":"hide","offset":12,"b2t":false,"scrollpercent":true,"onmobile":true},
     fancybox: true,
     tabs: true,
     motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
@@ -139,13 +181,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/08/30/Js数据类型转换/"/>
+  <link rel="canonical" href="http://yqs19960816.github.io/tags/垃圾回收机制/"/>
 
 
 
 
 
-  <title>JS数据类型转换 | Hide on bush's Blog</title>
+  <title>标签: 垃圾回收机制 | Hide on bush's Blog</title>
   
 
 
@@ -173,7 +215,7 @@
     
   
 
-  <div class="container sidebar-position-left page-post-detail">
+  <div class="container sidebar-position-left ">
     <div class="headband"></div>
     <a href="https://your-url" class="github-corner" aria-label="View source on Github"><svg width="80" height="80" viewBox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -189,7 +231,7 @@
       </a>
     </div>
       
-        <p class="site-subtitle">心有猛虎，细嗅蔷薇。</p>
+        <p class="site-subtitle"></p>
       
   </div>
 
@@ -311,284 +353,54 @@
           <div id="content" class="content">
             
 
-  <div id="posts" class="posts-expand">
-    
+  
+  
+  
+  <div class="post-block tag">
 
-  
+    <div id="posts" class="posts-collapse">
+      <div class="collection-title">
+        <h1>垃圾回收机制<small>标签</small>
+        </h1>
+      </div>
 
-  
-  
-  
+      
+        
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/08/30/Js数据类型转换/">
+    <header class="post-header">
 
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Hide on bush">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hide on bush's Blog">
-    </span>
-
-    
-      <header class="post-header">
-
+      <h2 class="post-title">
         
+            <a class="post-title-link" href="/2018/08/31/Js数据类型转换/" itemprop="url">
+              
+                <span itemprop="name">JS数据类型转换</span>
+              
+            </a>
         
-          <h1 class="post-title" itemprop="name headline">JS数据类型转换</h1>
-        
+      </h2>
 
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-08-30T11:39:44+08:00">
-                Aug 30 2018
-              </time>
-            
+      <div class="post-meta">
+        <time class="post-time" itemprop="dateCreated"
+              datetime="2018-08-31T11:39:44+08:00"
+              content="2018-08-31" >
+          08-31
+        </time>
+      </div>
 
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/前端/" itemprop="url" rel="index">
-                    <span itemprop="name">前端</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/前端/JavaScript/" itemprop="url" rel="index">
-                    <span itemprop="name">JavaScript</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-            <span class="post-meta-divider">|</span>
-            <span class="page-pv"><i class="fa fa-eye"></i> 阅读次数：
-            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
-            </span>
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  1,281
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">
-                  5
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        <p>JS有5种简单数据类型（也称基本数据类型）：<code>undefined</code>、<code>null</code>、<code>Boolean</code>、<code>Number</code>和<code>String</code>。还有两种复杂数据类型——<code>symbol</code>（不做多介绍）和<code>Object</code>，对象本质上是由一组无序的名值对组成的，ECMAScring不支持任何创建自定义类型的机制，而所有值最终都将是上述7种数据类型之一。<br><a id="more"></a></p>
-<h4 id="数据类型的相互转换"><a href="#数据类型的相互转换" class="headerlink" title="数据类型的相互转换"></a>数据类型的相互转换</h4><h5 id="任意数据类型转字符串"><a href="#任意数据类型转字符串" class="headerlink" title="任意数据类型转字符串"></a>任意数据类型转字符串</h5><p><code>String(x)</code><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">String(1)//&quot;1&quot;</span><br><span class="line"></span><br><span class="line">String(true)//&quot;true&quot;</span><br><span class="line"></span><br><span class="line">String(null)//&quot;null&quot;</span><br><span class="line"></span><br><span class="line">String(undefined)//&quot;undefined&quot;</span><br><span class="line"></span><br><span class="line">String(&#123;&#125;)//&quot;[Object Object]&quot;</span><br></pre></td></tr></table></figure></p>
-<p><code>toString()</code><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">(1).toString()  //&quot;1&quot;</span><br><span class="line"></span><br><span class="line">true.toString() //&quot;true&quot;</span><br><span class="line"></span><br><span class="line">null.toString()  //Uncaught TypeError: Cannot read property &apos;toString&apos; of null</span><br><span class="line"> // at &lt;anonymous&gt;:1:6</span><br><span class="line"></span><br><span class="line">undefined.toString()  //Uncaught TypeError: Cannot read property &apos;toString&apos; of undefined</span><br><span class="line">//at &lt;anonymous&gt;:1:11</span><br><span class="line">&#123;&#125;.toString()   //Uncaught SyntaxError: Unexpected token .</span><br><span class="line"></span><br><span class="line">(&#123;&#125;).toString()  //&quot;[object Object]&quot;</span><br></pre></td></tr></table></figure></p>
-<p><code>老司机用法：x+&#39;&#39;</code><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">1+&apos;&apos;  //  &quot;1&quot;</span><br><span class="line">true+&apos;&apos; // &apos;true&apos;</span><br><span class="line">null+&apos;&apos; // &apos;null&apos;</span><br><span class="line">undefined+&apos;&apos; // &apos;undefined&apos;</span><br><span class="line">&#123;&#125;+&apos;&apos; // 0</span><br><span class="line">var o = &#123;&#125;</span><br><span class="line">o+ &apos;&apos; //&#123;object Object&#125;</span><br></pre></td></tr></table></figure></p>
-<hr>
-<h5 id="任意数据类型转数字"><a href="#任意数据类型转数字" class="headerlink" title="任意数据类型转数字"></a>任意数据类型转数字</h5><ul>
-<li><code>Number(x)</code></li>
-<li><code>parselnt(x，10）</code><a href="https://developer.mozilla.org/zh-CN/" target="_blank" rel="noopener">MDN</a></li>
-<li><code>parseFloat(x)</code><a href="https://developer.mozilla.org/zh-CN/" target="_blank" rel="noopener">MDN</a></li>
-<li><code>x-0</code></li>
-<li><code>+x</code></li>
-</ul>
-<hr>
-<h5 id="任意数据类型转布尔值"><a href="#任意数据类型转布尔值" class="headerlink" title="任意数据类型转布尔值"></a>任意数据类型转布尔值</h5><ul>
-<li><code>Boolean(x)</code></li>
-<li><code>!!x</code><h5 id="五个falsy值"><a href="#五个falsy值" class="headerlink" title="五个falsy值"></a>五个falsy值</h5><code>0</code>      <code>NaN</code>     <code>&#39;&#39;</code>       <code>null</code>         <code>undefined</code>     <blockquote>
-<p>falsy是在Boolean上下文中认定可转换为false的值。JavaScript在需要用到布尔类型的上下文中使用强制类型转换（Type  Conversion）将值转换为布尔值，比如：在条件语句或循环语句中</p>
-</blockquote>
-</li>
-</ul>
-<hr>
-<h4 id="内存图"><a href="#内存图" class="headerlink" title="内存图"></a>内存图</h4><ul>
-<li>你买一个 <a href="https://item.jd.com/4071422.html" title="null" target="_blank" rel="noopener">8G 的内存条</a></li>
-<li>操作系统开机即占用 512MB</li>
-<li>Chrome 打开即占用 1G 内存</li>
-<li>Chrome 各每个网页分配一定数量的内存</li>
-<li>这些内存要分给页面渲染器、网络模块、浏览器外壳和 JS 引擎（V8引擎）</li>
-<li>JS 引擎将内存分为代码区和数据区</li>
-<li>我们只研究数据区</li>
-<li>数据区分为 Stack（栈内存） 和 Heap（堆内存）</li>
-<li>简单类型的数据直接存在 Stack 里</li>
-<li>复杂类型的数据是把 Heap 地址存在 Stack 里<br>遇到问题尽量画图分析。</li>
-</ul>
-<hr>
-<p>如果将复杂数据类型存放在栈内存里面，那么向其中添加数据就很麻烦、其中一些数据就需要向后面移动。只需要在栈内存中给代表复杂数据类型（对象）的变量存放一个地址（没有指针，是引用）指向堆内存中的数据。一个变量等于另一个复杂数据类型，就把地址复制给它。<br>所有的变量和对象都是引用关系。</p>
-<h5 id="4个常见的面试题"><a href="#4个常见的面试题" class="headerlink" title="4个常见的面试题"></a>4个常见的面试题</h5><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = <span class="number">1</span></span><br><span class="line"><span class="keyword">var</span> b = a</span><br><span class="line">b = <span class="number">2</span></span><br><span class="line">请问 a 显示是几？  <span class="comment">//1</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = &#123;<span class="attr">name</span>: <span class="string">'a'</span>&#125;</span><br><span class="line"><span class="keyword">var</span> b = a</span><br><span class="line">b = &#123;<span class="attr">name</span>: <span class="string">'b'</span>&#125;</span><br><span class="line">请问现在 a.name 是多少？<span class="comment">//'a'</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = &#123;<span class="attr">name</span>: <span class="string">'a'</span>&#125;</span><br><span class="line"><span class="keyword">var</span> b = a</span><br><span class="line">b.name = <span class="string">'b'</span></span><br><span class="line">请问现在 a.name 是多少？<span class="comment">//'b'</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = &#123;<span class="attr">name</span>: <span class="string">'a'</span>&#125;</span><br><span class="line"><span class="keyword">var</span> b = a</span><br><span class="line">b = <span class="literal">null</span></span><br><span class="line">请问现在 a 是什么？<span class="comment">//&#123;name: 'a'&#125;</span></span><br></pre></td></tr></table></figure>
-<h5 id="垃圾回收机制"><a href="#垃圾回收机制" class="headerlink" title="垃圾回收机制"></a>垃圾回收机制</h5><p><strong>GC 垃圾回收</strong> <code>如果一个对象没有被引用，那么它就是垃圾，将会被回收。</code><br>引用包括事件触发引用，如果一个函数被页面上的事件引用了，也不会算作垃圾被回收。<br>解决办法：将事件赋值null，就表示不再引用。<br><strong>IE6 BUG</strong>  无法正常的在页面关闭时，将没有人引用的垃圾正常的清除。设置window.onunload事件，将所有的事件都设置为null。<br><strong>内存泄露</strong>：表示该被标记为垃圾的数据没有被标记，内存就会被永久的占用。除非把整个浏览器关闭，否则浏览器就会吃很多的内存，无法再分配新的内存用于存储数据。</p>
-<blockquote>
-<p>程序中己动态分配的堆内存由于某种原因程序未释放或无法释放，造成系统内存的浪费，导致程序运行速度减慢甚至系统崩溃等严重后果.</p>
-</blockquote>
-<h5 id="深复制是什么鬼"><a href="#深复制是什么鬼" class="headerlink" title="深复制是什么鬼"></a>深复制是什么鬼</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var a = 1</span><br><span class="line">var b = a</span><br><span class="line">b = 2 //这个时候改变 b</span><br></pre></td></tr></table></figure>
-<p>a 完全不受 b 的影响<br>那么我们就说这是一个深复制<br>对于简单类型的数据来说，赋值就是深拷贝。<br>对于复杂类型的数据（对象）来说，才要区分浅拷贝和深拷贝。</p>
-<p>这是一个浅拷贝的例子<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var a = &#123;name: &apos;frank&apos;&#125;</span><br><span class="line">var b = a</span><br><span class="line">b.name = &apos;b&apos;</span><br><span class="line">a.name === &apos;b&apos; // true</span><br></pre></td></tr></table></figure></p>
-<p>因为我们对 b 操作后，a 也变了</p>
-<p>什么是深拷贝了，就是对 Heap 内存进行完全的拷贝。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var a = &#123;name: &apos;frank&apos;&#125;</span><br><span class="line">var b = deepClone(a) // deepClone 还不知道怎么实现</span><br><span class="line">b.name = &apos;b&apos;</span><br><span class="line">a.name === &apos;a&apos; // true</span><br></pre></td></tr></table></figure></p>
-<p>对于基本类型变量，简单的赋值就是深拷贝。改变一个变量，不影响赋值的变量，两者互不干扰。对于深浅拷贝，一般只讨论复杂数据类型。<br>复杂类型变量，a等于b，a改变导致b也会改变，这就是浅拷贝。因为只是将stack里面的地址复制了一份而已。复杂数据类型的深拷贝，会拷贝堆内存里面的数据，包括数据内的引用，将不再引用同一个地址，而是引用新拷贝的数据的地址。</p>
-
-      
-    </div>
-    
-    
-    
-      <div>
-  
-    <div>
-    
-        <div style="text-align:center;color: #999999;font-size:14px;">-------------Page's over<i class="fa fa-paw"></i>Thanks for reading~ -------------</div>
-    
-</div>
-  
-</div>
-
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-        <div class="post-tags">
-          
-            <a href="/tags/前端/" rel="tag"><i class="fa fa-tag"></i> 前端</a>
-          
-            <a href="/tags/数据类型转换/" rel="tag"><i class="fa fa-tag"></i> 数据类型转换</a>
-          
-            <a href="/tags/GC垃圾回收机制/" rel="tag"><i class="fa fa-tag"></i> GC垃圾回收机制</a>
-          
-            <a href="/tags/深浅拷贝/" rel="tag"><i class="fa fa-tag"></i> 深浅拷贝</a>
-          
-        </div>
-      
-
-      
-      
-      
-
-      
-        <div class="post-nav">
-          <div class="post-nav-next post-nav-item">
-            
-          </div>
-
-          <span class="post-nav-divider"></span>
-
-          <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/08/30/原型和原型链/" rel="prev" title="原型和原型链">
-                原型和原型链 <i class="fa fa-chevron-right"></i>
-              </a>
-            
-          </div>
-        </div>
-      
-
-      
-      
-    </footer>
-  </div>
-  
-  
-  
+    </header>
   </article>
 
 
-
-    <div class="post-spread">
-      
-        
-<script>
-  with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='//bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
-</script>
-
       
     </div>
+
   </div>
+  
+  
+  
+
+  
 
 
           </div>
@@ -596,10 +408,6 @@
 
 
           
-
-  
-
-
 
         </div>
         
@@ -615,24 +423,21 @@
 
   <aside id="sidebar" class="sidebar">
     
+      <div id="sidebar-dimmer"></div>
+    
     <div class="sidebar-inner">
 
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <section class="site-overview-wrap sidebar-panel">
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/1.png"
+                alt="Hide on bush" />
             
               <p class="site-author-name" itemprop="name">Hide on bush</p>
               <p class="site-description motion-element" itemprop="description">黑夜给了我黑色的眼睛，而我却用它寻找光明。</p>
@@ -676,13 +481,6 @@
           </nav>
 
           
-            <div class="feed-link motion-element">
-              <a href="/atom.xml" rel="alternate">
-                <i class="fa fa-rss"></i>
-                RSS
-              </a>
-            </div>
-          
 
           
             <div class="links-of-author motion-element">
@@ -707,15 +505,15 @@
 
           
           
-            <div class="links-of-blogroll motion-element links-of-blogroll-block">
+            <div class="links-of-blogroll motion-element links-of-blogroll-inline">
               <div class="links-of-blogroll-title">
                 <i class="fa  fa-fw fa-link"></i>
-                推荐阅读
+                神奇的链接
               </div>
               <ul class="links-of-blogroll-list">
                 
                   <li class="links-of-blogroll-item">
-                    <a href="http://www.uisdc.com/" title="优设" target="_blank">优设</a>
+                    <a href="https://music.163.com/song?id=17177324&userid=370760204" title="😆 网易云音乐 😆" target="_blank">😆 网易云音乐 😆</a>
                   </li>
                 
                   <li class="links-of-blogroll-item">
@@ -738,6 +536,10 @@
                     <a href="http://wf.uisdc.com/cn/" title="google前端开发基础" target="_blank">google前端开发基础</a>
                   </li>
                 
+                  <li class="links-of-blogroll-item">
+                    <a href="https://stackoverflow.com" title="stackoverflow" target="_blank">stackoverflow</a>
+                  </li>
+                
               </ul>
             </div>
           
@@ -747,22 +549,6 @@
         </div>
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#数据类型的相互转换"><span class="nav-number">1.</span> <span class="nav-text">数据类型的相互转换</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#任意数据类型转字符串"><span class="nav-number">1.1.</span> <span class="nav-text">任意数据类型转字符串</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#任意数据类型转数字"><span class="nav-number">1.2.</span> <span class="nav-text">任意数据类型转数字</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#任意数据类型转布尔值"><span class="nav-number">1.3.</span> <span class="nav-text">任意数据类型转布尔值</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#五个falsy值"><span class="nav-number">1.4.</span> <span class="nav-text">五个falsy值</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#内存图"><span class="nav-number">2.</span> <span class="nav-text">内存图</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#4个常见的面试题"><span class="nav-number">2.1.</span> <span class="nav-text">4个常见的面试题</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#垃圾回收机制"><span class="nav-number">2.2.</span> <span class="nav-text">垃圾回收机制</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#深复制是什么鬼"><span class="nav-number">2.3.</span> <span class="nav-text">深复制是什么鬼</span></a></li></ol></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       
@@ -792,7 +578,7 @@
     
       <span class="post-meta-item-text">博客全站字数&#58;</span>
     
-    <span title="博客全站字数">3.1k</span>
+    <span title="博客全站字数">3.0k</span>
   
 </div>
 
@@ -831,6 +617,8 @@
     
       <div class="back-to-top">
         <i class="fa fa-arrow-up"></i>
+        
+          <span id="scrollpercent"><span>0</span>%</span>
         
       </div>
     
@@ -872,32 +660,32 @@
 
   
   
-    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
   
 
   
   
-    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.min.js"></script>
   
 
   
   
-    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery_lazyload/1.9.7/jquery.lazyload.min.js"></script>
   
 
   
   
-    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.2.1/velocity.min.js"></script>
   
 
   
   
-    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.2.1/velocity.ui.min.js"></script>
   
 
   
   
-    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js"></script>
   
 
   
@@ -926,10 +714,6 @@
 
 
   
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
-
-
 
   
 
@@ -1304,6 +1088,26 @@
   
 
   
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
   
 
 

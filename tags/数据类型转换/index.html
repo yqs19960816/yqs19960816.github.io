@@ -17,9 +17,13 @@
   
   
     
+      
     
-  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
-  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
+    
+      
+    
+  <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+  <link href="//cdn.bootcss.com/pace/1.0.2/themes/blue/pace-theme-flash.min.css" rel="stylesheet">
 
 
 
@@ -57,15 +61,57 @@
 
   
   
-  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+    
+  
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+    
+    <link href="https://fonts.cat.net/css?family=Lato:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Roboto Mono:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
 
 
 
 
 
 
+  
 
-<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet" type="text/css" />
 
 <link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
 
@@ -85,13 +131,11 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="Hexo, NexT,前端,Blog,搭建博客" />
 
 
 
 
-
-  <link rel="alternate" href="/atom.xml" title="Hide on bush's Blog" type="application/atom+xml" />
 
 
 
@@ -101,7 +145,7 @@
 <meta name="description" content="黑夜给了我黑色的眼睛，而我却用它寻找光明。">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Hide on bush&#39;s Blog">
-<meta property="og:url" content="http://yoursite.com/tags/数据类型转换/index.html">
+<meta property="og:url" content="http://yqs19960816.github.io/tags/数据类型转换/index.html">
 <meta property="og:site_name" content="Hide on bush&#39;s Blog">
 <meta property="og:description" content="黑夜给了我黑色的眼睛，而我却用它寻找光明。">
 <meta property="og:locale" content="zh-Hans">
@@ -117,7 +161,7 @@
     root: '/',
     scheme: 'Gemini',
     version: '5.1.4',
-    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    sidebar: {"position":"left","display":"hide","offset":12,"b2t":false,"scrollpercent":true,"onmobile":true},
     fancybox: true,
     tabs: true,
     motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
@@ -137,7 +181,7 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/tags/数据类型转换/"/>
+  <link rel="canonical" href="http://yqs19960816.github.io/tags/数据类型转换/"/>
 
 
 
@@ -187,7 +231,7 @@
       </a>
     </div>
       
-        <p class="site-subtitle">心有猛虎，细嗅蔷薇。</p>
+        <p class="site-subtitle"></p>
       
   </div>
 
@@ -328,7 +372,7 @@
 
       <h2 class="post-title">
         
-            <a class="post-title-link" href="/2018/08/30/Js数据类型转换/" itemprop="url">
+            <a class="post-title-link" href="/2018/08/31/Js数据类型转换/" itemprop="url">
               
                 <span itemprop="name">JS数据类型转换</span>
               
@@ -338,9 +382,9 @@
 
       <div class="post-meta">
         <time class="post-time" itemprop="dateCreated"
-              datetime="2018-08-30T11:39:44+08:00"
-              content="Aug 30 2018" >
-          08-30
+              datetime="2018-08-31T11:39:44+08:00"
+              content="2018-08-31" >
+          08-31
         </time>
       </div>
 
@@ -379,6 +423,8 @@
 
   <aside id="sidebar" class="sidebar">
     
+      <div id="sidebar-dimmer"></div>
+    
     <div class="sidebar-inner">
 
       
@@ -388,6 +434,10 @@
       <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/1.png"
+                alt="Hide on bush" />
             
               <p class="site-author-name" itemprop="name">Hide on bush</p>
               <p class="site-description motion-element" itemprop="description">黑夜给了我黑色的眼睛，而我却用它寻找光明。</p>
@@ -431,13 +481,6 @@
           </nav>
 
           
-            <div class="feed-link motion-element">
-              <a href="/atom.xml" rel="alternate">
-                <i class="fa fa-rss"></i>
-                RSS
-              </a>
-            </div>
-          
 
           
             <div class="links-of-author motion-element">
@@ -462,15 +505,15 @@
 
           
           
-            <div class="links-of-blogroll motion-element links-of-blogroll-block">
+            <div class="links-of-blogroll motion-element links-of-blogroll-inline">
               <div class="links-of-blogroll-title">
                 <i class="fa  fa-fw fa-link"></i>
-                推荐阅读
+                神奇的链接
               </div>
               <ul class="links-of-blogroll-list">
                 
                   <li class="links-of-blogroll-item">
-                    <a href="http://www.uisdc.com/" title="优设" target="_blank">优设</a>
+                    <a href="https://music.163.com/song?id=17177324&userid=370760204" title="😆 网易云音乐 😆" target="_blank">😆 网易云音乐 😆</a>
                   </li>
                 
                   <li class="links-of-blogroll-item">
@@ -491,6 +534,10 @@
                 
                   <li class="links-of-blogroll-item">
                     <a href="http://wf.uisdc.com/cn/" title="google前端开发基础" target="_blank">google前端开发基础</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://stackoverflow.com" title="stackoverflow" target="_blank">stackoverflow</a>
                   </li>
                 
               </ul>
@@ -531,7 +578,7 @@
     
       <span class="post-meta-item-text">博客全站字数&#58;</span>
     
-    <span title="博客全站字数">3.1k</span>
+    <span title="博客全站字数">3.0k</span>
   
 </div>
 
@@ -570,6 +617,8 @@
     
       <div class="back-to-top">
         <i class="fa fa-arrow-up"></i>
+        
+          <span id="scrollpercent"><span>0</span>%</span>
         
       </div>
     
@@ -611,32 +660,32 @@
 
   
   
-    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
   
 
   
   
-    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.min.js"></script>
   
 
   
   
-    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery_lazyload/1.9.7/jquery.lazyload.min.js"></script>
   
 
   
   
-    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.2.1/velocity.min.js"></script>
   
 
   
   
-    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.2.1/velocity.ui.min.js"></script>
   
 
   
   
-    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js"></script>
   
 
   
