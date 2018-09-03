@@ -150,7 +150,7 @@
 <meta property="og:site_name" content="Hide on bush&#39;s Blog">
 <meta property="og:description" content="JS有5种简单数据类型（也称基本数据类型）：undefined、null、Boolean、Number和String。还有两种复杂数据类型——symbol（不做多介绍）和Object，对象本质上是由一组无序的名值对组成的，ECMAScring不支持任何创建自定义类型的机制，而所有值最终都将是上述7种数据类型之一。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-09-02T07:11:10.022Z">
+<meta property="og:updated_time" content="2018-09-03T16:35:32.395Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JS数据类型转换">
 <meta name="twitter:description" content="JS有5种简单数据类型（也称基本数据类型）：undefined、null、Boolean、Number和String。还有两种复杂数据类型——symbol（不做多介绍）和Object，对象本质上是由一组无序的名值对组成的，ECMAScring不支持任何创建自定义类型的机制，而所有值最终都将是上述7种数据类型之一。">
@@ -463,7 +463,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  1,281
+                  2,037
                 </span>
               
 
@@ -479,7 +479,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  5
+                  8
                 </span>
               
             </div>
@@ -501,8 +501,9 @@
 
       
         <p>JS有5种简单数据类型（也称基本数据类型）：<code>undefined</code>、<code>null</code>、<code>Boolean</code>、<code>Number</code>和<code>String</code>。还有两种复杂数据类型——<code>symbol</code>（不做多介绍）和<code>Object</code>，对象本质上是由一组无序的名值对组成的，ECMAScring不支持任何创建自定义类型的机制，而所有值最终都将是上述7种数据类型之一。<br><a id="more"></a></p>
-<h4 id="数据类型的相互转换"><a href="#数据类型的相互转换" class="headerlink" title="数据类型的相互转换"></a>数据类型的相互转换</h4><h5 id="任意数据类型转字符串"><a href="#任意数据类型转字符串" class="headerlink" title="任意数据类型转字符串"></a>任意数据类型转字符串</h5><p><code>String(x)</code><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">String(1)//&quot;1&quot;</span><br><span class="line"></span><br><span class="line">String(true)//&quot;true&quot;</span><br><span class="line"></span><br><span class="line">String(null)//&quot;null&quot;</span><br><span class="line"></span><br><span class="line">String(undefined)//&quot;undefined&quot;</span><br><span class="line"></span><br><span class="line">String(&#123;&#125;)//&quot;[Object Object]&quot;</span><br></pre></td></tr></table></figure></p>
-<p><code>toString()</code><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">(1).toString()  //&quot;1&quot;</span><br><span class="line"></span><br><span class="line">true.toString() //&quot;true&quot;</span><br><span class="line"></span><br><span class="line">null.toString()  //Uncaught TypeError: Cannot read property &apos;toString&apos; of null</span><br><span class="line"> // at &lt;anonymous&gt;:1:6</span><br><span class="line"></span><br><span class="line">undefined.toString()  //Uncaught TypeError: Cannot read property &apos;toString&apos; of undefined</span><br><span class="line">//at &lt;anonymous&gt;:1:11</span><br><span class="line">&#123;&#125;.toString()   //Uncaught SyntaxError: Unexpected token .</span><br><span class="line"></span><br><span class="line">(&#123;&#125;).toString()  //&quot;[object Object]&quot;</span><br></pre></td></tr></table></figure></p>
+<h4 id="数据类型的相互转换-强制转换"><a href="#数据类型的相互转换-强制转换" class="headerlink" title="数据类型的相互转换(强制转换)"></a>数据类型的相互转换(强制转换)</h4><p>强制转换主要指使用Number、String和Boolean三个函数，手动将各种类型的值，分布转换成数字、字符串或者布尔值。</p>
+<h5 id="任意数据类型转字符串"><a href="#任意数据类型转字符串" class="headerlink" title="任意数据类型转字符串"></a>任意数据类型转字符串</h5><p><code>String(x)</code>函数可以将任意类型的值转化成字符串，转换规则如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">String(1)//&quot;1&quot; 数值：转为相应的字符串</span><br><span class="line"></span><br><span class="line">String(true)//&quot;true&quot; 布尔值：true转为字符串&quot;true&quot;，false转为字符串&quot;false&quot;。</span><br><span class="line"></span><br><span class="line">String(null)//&quot;null&quot; 转为字符串&quot;null&quot;。</span><br><span class="line"></span><br><span class="line">String(undefined)//&quot;undefined&quot; 转为字符串&quot;undefined&quot;。</span><br><span class="line"></span><br><span class="line">String(&#123;&#125;)//&quot;[Object Object]&quot; 对象，返回一个类型字符串；</span><br><span class="line"></span><br><span class="line">String([1, 2, 3]) // &quot;1,2,3&quot; 数组，返回该数组的字符串形式。</span><br></pre></td></tr></table></figure></p>
+<p><code>toString()</code>方法也可以将数据转化为字符串形式，不过undefined和null没有这个方法。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">(1).toString()  //&quot;1&quot;</span><br><span class="line"></span><br><span class="line">true.toString() //&quot;true&quot;</span><br><span class="line"></span><br><span class="line">null.toString()  //Uncaught TypeError: Cannot read property &apos;toString&apos; of null</span><br><span class="line"> // at &lt;anonymous&gt;:1:6</span><br><span class="line"></span><br><span class="line">undefined.toString()  //Uncaught TypeError: Cannot read property &apos;toString&apos; of undefined</span><br><span class="line">//at &lt;anonymous&gt;:1:11</span><br><span class="line">&#123;&#125;.toString()   //Uncaught SyntaxError: Unexpected token .</span><br><span class="line"></span><br><span class="line">(&#123;&#125;).toString()  //&quot;[object Object]&quot;</span><br></pre></td></tr></table></figure></p>
 <p><code>老司机用法：x+&#39;&#39;</code><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">1+&apos;&apos;  //  &quot;1&quot;</span><br><span class="line">true+&apos;&apos; // &apos;true&apos;</span><br><span class="line">null+&apos;&apos; // &apos;null&apos;</span><br><span class="line">undefined+&apos;&apos; // &apos;undefined&apos;</span><br><span class="line">&#123;&#125;+&apos;&apos; // 0</span><br><span class="line">var o = &#123;&#125;</span><br><span class="line">o+ &apos;&apos; //&#123;object Object&#125;</span><br></pre></td></tr></table></figure></p>
 <hr>
 <h5 id="任意数据类型转数字"><a href="#任意数据类型转数字" class="headerlink" title="任意数据类型转数字"></a>任意数据类型转数字</h5><ul>
@@ -510,17 +511,24 @@
 <li><code>parselnt(x，10）</code><a href="https://developer.mozilla.org/zh-CN/" target="_blank" rel="noopener">MDN</a></li>
 <li><code>parseFloat(x)</code><a href="https://developer.mozilla.org/zh-CN/" target="_blank" rel="noopener">MDN</a></li>
 <li><code>x-0</code></li>
-<li><code>+x</code></li>
+<li><code>+x</code><br>原始类型值的转换规则如下:<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">// 数值：转换后还是原来的值</span><br><span class="line">Number(324) // 324</span><br><span class="line"></span><br><span class="line">// 字符串：如果可以被解析为数值，则转换为相应的数值</span><br><span class="line">Number(&apos;324&apos;) // 324</span><br><span class="line"></span><br><span class="line">// 字符串：如果不可以被解析为数值，返回 NaN</span><br><span class="line">Number(&apos;324abc&apos;) // NaN</span><br><span class="line"></span><br><span class="line">// 空字符串转为0</span><br><span class="line">Number(&apos;&apos;) // 0</span><br><span class="line"></span><br><span class="line">// 布尔值：true 转成 1，false 转成 0</span><br><span class="line">Number(true) // 1</span><br><span class="line">Number(false) // 0</span><br><span class="line"></span><br><span class="line">// undefined：转成 NaN</span><br><span class="line">Number(undefined) // NaN</span><br><span class="line"></span><br><span class="line">// null：转成0</span><br><span class="line">Number(null) // 0</span><br></pre></td></tr></table></figure>
+</li>
 </ul>
+<p><code>Number</code>函数将字符串转为数值，要比<code>parseInt</code>函数严格很多。基本上，只要有一个字符无法转成数值，整个字符串就会被转为<code>NaN</code>,parseInt逐个解析字符，而Number函数整体转换字符串的类型,另外，parseInt和Number函数都会自动过滤一个字符串前导和后缀的空格。<br>对象<br>简单的规则是，Number方法的参数是对象时，将返回NaN，除非是包含单个数值的数组。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Number(&#123;a: 1&#125;) // NaN</span><br><span class="line">Number([1, 2, 3]) // NaN</span><br><span class="line">Number([5]) // 5</span><br></pre></td></tr></table></figure></p>
 <hr>
 <h5 id="任意数据类型转布尔值"><a href="#任意数据类型转布尔值" class="headerlink" title="任意数据类型转布尔值"></a>任意数据类型转布尔值</h5><ul>
-<li><code>Boolean(x)</code></li>
-<li><code>!!x</code><h5 id="五个falsy值"><a href="#五个falsy值" class="headerlink" title="五个falsy值"></a>五个falsy值</h5><code>0</code>      <code>NaN</code>     <code>&#39;&#39;</code>       <code>null</code>         <code>undefined</code>     <blockquote>
-<p>falsy是在Boolean上下文中认定可转换为false的值。JavaScript在需要用到布尔类型的上下文中使用强制类型转换（Type  Conversion）将值转换为布尔值，比如：在条件语句或循环语句中</p>
+<li><code>Boolean(x)</code>函数可以将任意类型的值转为布尔值.</li>
+<li><code>!!x</code><br>五个falsy值转换结果为false，其他的值全部为true。<br><code>0</code>         <code>NaN</code>        <code>&#39;&#39;</code>         <code>null</code>           <code>undefined</code>     <blockquote>
+<p>falsy是在Boolean上下文中认定可转换为false的值。JavaScript在需要用到布尔类型的上下文中使用强制类型转换（Type  Conversion）将值转换为布尔值，比如：在条件语句或循环语句中<br>注意，所有对象（包括空对象）的转换结果都是true，甚至连false对应的布尔对象new Boolean(false)也是true。</p>
 </blockquote>
 </li>
 </ul>
 <hr>
+<h4 id="数据类型的相互转换-自动转换"><a href="#数据类型的相互转换-自动转换" class="headerlink" title="数据类型的相互转换(自动转换)"></a>数据类型的相互转换(自动转换)</h4><p>到以下三种情况时，JavaScript 会自动转换数据类型，即转换是自动完成的，用户不可见。<br>第一种情况，不同类型的数据互相运算。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">123 + &apos;abc&apos; // &quot;123abc&quot;</span><br></pre></td></tr></table></figure></p>
+<p>第二种情况，对非布尔值类型的数据求布尔值。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">if (&apos;abc&apos;) &#123;</span><br><span class="line">  console.log(&apos;hello&apos;)</span><br><span class="line">&#125;  // &quot;hello&quot;</span><br></pre></td></tr></table></figure></p>
+<p>第三种情况，对非数值类型的值使用一元运算符（即+和-）。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">+ &#123;foo: &apos;bar&apos;&#125; // NaN</span><br><span class="line">- [1, 2, 3] // NaN</span><br></pre></td></tr></table></figure></p>
+<p>自动转换的规则是这样的：预期什么类型的值，就调用该类型的转换函数。比如，某个位置预期为字符串，就调用String函数进行转换。如果该位置即可以是字符串，也可能是数值，那么默认转为数值。</p>
+<p>由于自动转换具有不确定性，而且不易除错，建议在预期为布尔值、数值、字符串的地方，全部使用Boolean、Number和String函数进行显式转换。</p>
 <h4 id="内存图"><a href="#内存图" class="headerlink" title="内存图"></a>内存图</h4><ul>
 <li>你买一个 <a href="https://item.jd.com/4071422.html" title="null" target="_blank" rel="noopener">8G 的内存条</a></li>
 <li>操作系统开机即占用 512MB</li>
@@ -803,7 +811,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#数据类型的相互转换"><span class="nav-number">1.</span> <span class="nav-text">数据类型的相互转换</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#任意数据类型转字符串"><span class="nav-number">1.1.</span> <span class="nav-text">任意数据类型转字符串</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#任意数据类型转数字"><span class="nav-number">1.2.</span> <span class="nav-text">任意数据类型转数字</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#任意数据类型转布尔值"><span class="nav-number">1.3.</span> <span class="nav-text">任意数据类型转布尔值</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#五个falsy值"><span class="nav-number">1.4.</span> <span class="nav-text">五个falsy值</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#内存图"><span class="nav-number">2.</span> <span class="nav-text">内存图</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#4个常见的面试题"><span class="nav-number">2.1.</span> <span class="nav-text">4个常见的面试题</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#垃圾回收机制"><span class="nav-number">2.2.</span> <span class="nav-text">垃圾回收机制</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#深复制是什么鬼"><span class="nav-number">2.3.</span> <span class="nav-text">深复制是什么鬼</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#数据类型的相互转换-强制转换"><span class="nav-number">1.</span> <span class="nav-text">数据类型的相互转换(强制转换)</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#任意数据类型转字符串"><span class="nav-number">1.1.</span> <span class="nav-text">任意数据类型转字符串</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#任意数据类型转数字"><span class="nav-number">1.2.</span> <span class="nav-text">任意数据类型转数字</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#任意数据类型转布尔值"><span class="nav-number">1.3.</span> <span class="nav-text">任意数据类型转布尔值</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#数据类型的相互转换-自动转换"><span class="nav-number">2.</span> <span class="nav-text">数据类型的相互转换(自动转换)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#内存图"><span class="nav-number">3.</span> <span class="nav-text">内存图</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#4个常见的面试题"><span class="nav-number">3.1.</span> <span class="nav-text">4个常见的面试题</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#垃圾回收机制"><span class="nav-number">3.2.</span> <span class="nav-text">垃圾回收机制</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#深复制是什么鬼"><span class="nav-number">3.3.</span> <span class="nav-text">深复制是什么鬼</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -837,7 +845,7 @@
     
       <span class="post-meta-item-text">博客全站字数&#58;</span>
     
-    <span title="博客全站字数">3.4k</span>
+    <span title="博客全站字数">4.2k</span>
   
 </div>
 
