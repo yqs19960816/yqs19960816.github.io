@@ -1850,7 +1850,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #12f9e8;
+  background: #2fcc60;
 }
 .site-author-image {
   display: block;
@@ -2868,21 +2868,20 @@ embed {
   margin-top: 0px;
 }
 #heart {
-  animation: heartAnimate 1.23s ease-in-out infinite;
+  animation: heartAnimate 1.25s ease-in-out infinite;
 }
 .with-love {
   color: #ff71a8;
 }
 .sidebar-active #sidebar-dimmer {
-  opacity: 0;
+  opacity: 0.3;
 }
-.sidebar {
+.sidebar-active {
   box-shadow: inset 0 2px 0px #000;
   background: -webkit-linear-gradient(left, #355c7d, #c06c84); /* Safari 5.1 - 6 */
   background: -o-linear-gradient(right, #355c7d, #c06c84); /* Opera 11.1 - 12*/
   background: -moz-linear-gradient(right, #355c7d, #c06c84); /* Firefox 3.6 - 15*/
   background: linear-gradient(to right, #355c7d, #c06c84); /* 标准的语法 */
-  color: #fcfcfe;
 }
 @-moz-keyframes heartAnimate {
   0%, 100% {
