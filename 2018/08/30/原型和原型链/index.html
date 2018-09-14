@@ -170,7 +170,7 @@
 <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/7762675-18b79050063fef54.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/7762675-bcc66f9c3fee62a3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/7762675-b55a983b29328466.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:updated_time" content="2018-09-14T15:54:24.123Z">
+<meta property="og:updated_time" content="2018-09-14T16:06:31.059Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="原型和原型链">
 <meta name="twitter:description" content="ECMAScript规定全区对象叫做global，但是浏览器把window作为全局对象（浏览器先存在的）window就是一个哈希表，有很多属性。window的属性就是全局变量。window下面的属性分为两类，第一类是ECMAScript规定必须有的函数，第二类是私有的（浏览器专有，标准不一）。">
@@ -531,9 +531,9 @@
 <h4 id="布尔值对象"><a href="#布尔值对象" class="headerlink" title="布尔值对象"></a>布尔值对象</h4><p><img src="https://upload-images.jianshu.io/upload_images/7762675-85f479feb146a7d0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
 <p>简单数据类型false和布尔对象false在被转换时是不相等的。<br><img src="https://upload-images.jianshu.io/upload_images/7762675-a8fca0101f51edf0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"><br>为什么不相等？两个对象地址值不同，自然不会相等,请牢记5个假值，对象经过布尔转换为真值。<br><img src="https://upload-images.jianshu.io/upload_images/7762675-e498313a71b73e28.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"><br>结论：所有新声明的对象都是不相等的。除非将一个对象的地址值赋值给另一个变量。</p>
 <p><code>Number  String  Boolean   Object</code>通过以上几种方式创建的对象都具有<code>toString</code>、<code>valueof</code>方法，这两个方法哪里来的呢？如果在每个对象都定义这两个方法太占内存。实现继承的方法：原型链、</p>
-<h5 id="要清楚原型链，首先先弄清楚对象。"><a href="#要清楚原型链，首先先弄清楚对象。" class="headerlink" title="要清楚原型链，首先先弄清楚对象。"></a>要清楚原型链，首先先弄清楚对象。</h5><p><em>普通对象,有<strong><strong>proto</strong></strong>属性(指向其原型链)，没有prototype属性。
+<h4 id="要清楚原型链，首先先弄清楚对象。"><a href="#要清楚原型链，首先先弄清楚对象。" class="headerlink" title="要清楚原型链，首先先弄清楚对象。"></a>要清楚原型链，首先先弄清楚对象。</h4><p><em>普通对象,有<strong><strong>proto</strong></strong>属性(指向其原型链)，没有prototype属性。
 </em>原型对象,构造函数.prototype原型对象还有constructor属性指向构造函数对象<br>*函数对象，通过new Function()创建的都是函数对象。用有prototype、<strong><strong>proto</strong></strong>属性(指向原型对象)</p>
-<h6 id="原型链概念"><a href="#原型链概念" class="headerlink" title="原型链概念"></a>原型链概念</h6><p>ECMAScript中描述了原型链的机制，将原型链作为实现继承的主要方式。其基本思想是利用原型让一个引用类型继承另一个引用类型的属性和方法。<br>在js中，每个对象都有一个指向它的原型对象的内部链接，这个原型对象又有自己的原型，直到某个对象的原型为null为止（也就是不再有原型指向），组成这条链的最后一环。这种一级一级的链接结构就称为原型链。<br>JS对象有一个指向一个原型对象的链，当试图访问一个对象的属性时，它不仅仅在该对象上搜寻，还会搜寻该对象的原型，以及该对象原型的原型，依此层层向上搜索，直到找到一个名字匹配的属性或到达原型链的末尾。</p>
+<h4 id="原型链概念"><a href="#原型链概念" class="headerlink" title="原型链概念"></a>原型链概念</h4><p>ECMAScript中描述了原型链的机制，将原型链作为实现继承的主要方式。其基本思想是利用原型让一个引用类型继承另一个引用类型的属性和方法。<br>在js中，每个对象都有一个指向它的原型对象的内部链接，这个原型对象又有自己的原型，直到某个对象的原型为null为止（也就是不再有原型指向），组成这条链的最后一环。这种一级一级的链接结构就称为原型链。<br>JS对象有一个指向一个原型对象的链，当试图访问一个对象的属性时，它不仅仅在该对象上搜寻，还会搜寻该对象的原型，以及该对象原型的原型，依此层层向上搜索，直到找到一个名字匹配的属性或到达原型链的末尾。</p>
 <blockquote>
 <p>所有引用类型默认都继承了<code>Object</code>，而这个继承也是通过原型链实现的，所有函数的默认原型都是<code>Object</code>的实例，因此默认原型都会包含一个内部指针，指<code>向Object.prototype</code>。这也正是所有自定义类型都会继承<code>toString（）</code>，<code>valueOf()</code>等默认方法的根本原因，所有函数的原型最顶端都有一个最终的对象原型，存储着对象本身自带方法和属性，当调用实例上的<code>toString()</code>等方法时，实际上是调用的是保存在<code>Object.prototype</code>中的那个方法。</p>
 </blockquote>
@@ -807,7 +807,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#简单类型与对象的区别："><span class="nav-number">1.</span> <span class="nav-text">简单类型与对象的区别：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#公有的属性藏在哪？"><span class="nav-number">2.</span> <span class="nav-text">公有的属性藏在哪？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#字符串对象"><span class="nav-number">3.</span> <span class="nav-text">字符串对象</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#布尔值对象"><span class="nav-number">4.</span> <span class="nav-text">布尔值对象</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#要清楚原型链，首先先弄清楚对象。"><span class="nav-number">4.1.</span> <span class="nav-text">要清楚原型链，首先先弄清楚对象。</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#原型链概念"><span class="nav-number">4.1.1.</span> <span class="nav-text">原型链概念</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#不写代码就有prototype"><span class="nav-number">4.2.</span> <span class="nav-text">不写代码就有prototype</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#简单类型与对象的区别："><span class="nav-number">1.</span> <span class="nav-text">简单类型与对象的区别：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#公有的属性藏在哪？"><span class="nav-number">2.</span> <span class="nav-text">公有的属性藏在哪？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#字符串对象"><span class="nav-number">3.</span> <span class="nav-text">字符串对象</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#布尔值对象"><span class="nav-number">4.</span> <span class="nav-text">布尔值对象</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#要清楚原型链，首先先弄清楚对象。"><span class="nav-number">5.</span> <span class="nav-text">要清楚原型链，首先先弄清楚对象。</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#原型链概念"><span class="nav-number">6.</span> <span class="nav-text">原型链概念</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#不写代码就有prototype"><span class="nav-number">6.1.</span> <span class="nav-text">不写代码就有prototype</span></a></li></ol></li></ol></div>
             
 
           </div>
