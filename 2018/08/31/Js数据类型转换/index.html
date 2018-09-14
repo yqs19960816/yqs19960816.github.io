@@ -131,7 +131,7 @@
 
 
 
-  <meta name="keywords" content="前端,数据类型转换,垃圾回收机制,深浅拷贝," />
+  <meta name="keywords" content="前端,数据类型转换," />
 
 
 
@@ -143,14 +143,14 @@
 
 
 <meta name="description" content="JS有5种简单数据类型（也称基本数据类型）：undefined、null、Boolean、Number和String。还有两种复杂数据类型——symbol（不做多介绍）和Object，对象本质上是由一组无序的名值对组成的，ECMAScring不支持任何创建自定义类型的机制，而所有值最终都将是上述7种数据类型之一。">
-<meta name="keywords" content="前端,数据类型转换,垃圾回收机制,深浅拷贝">
+<meta name="keywords" content="前端,数据类型转换">
 <meta property="og:type" content="article">
 <meta property="og:title" content="JS数据类型转换">
 <meta property="og:url" content="http://yqs19960816.github.io/2018/08/31/Js数据类型转换/index.html">
 <meta property="og:site_name" content="Hide on bush&#39;s Blog">
 <meta property="og:description" content="JS有5种简单数据类型（也称基本数据类型）：undefined、null、Boolean、Number和String。还有两种复杂数据类型——symbol（不做多介绍）和Object，对象本质上是由一组无序的名值对组成的，ECMAScring不支持任何创建自定义类型的机制，而所有值最终都将是上述7种数据类型之一。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-09-03T16:35:32.395Z">
+<meta property="og:updated_time" content="2018-09-14T15:14:28.905Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JS数据类型转换">
 <meta name="twitter:description" content="JS有5种简单数据类型（也称基本数据类型）：undefined、null、Boolean、Number和String。还有两种复杂数据类型——symbol（不做多介绍）和Object，对象本质上是由一组无序的名值对组成的，ECMAScring不支持任何创建自定义类型的机制，而所有值最终都将是上述7种数据类型之一。">
@@ -219,7 +219,7 @@
 
   <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
-    <a href="https://github.com/yqs19960816" class="github-corner" aria-label="View source on Github"><svg width="80" height="80" viewBox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+   <a href="https://github.com/yqs19960816" class="github-corner" aria-label="View source on Github"><svg width="80" height="80" viewBox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; left: 0; transform: scale(-1, 1);" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style></a>
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-wrapper">
   <div class="site-meta ">
@@ -374,7 +374,7 @@
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Hide on bush">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/1.png">
+      <meta itemprop="image" content="/images/IMG_0517.jpg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -463,7 +463,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  2,037
+                  1,078
                 </span>
               
 
@@ -479,7 +479,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  8
+                  4
                 </span>
               
             </div>
@@ -519,44 +519,17 @@
 <h5 id="任意数据类型转布尔值"><a href="#任意数据类型转布尔值" class="headerlink" title="任意数据类型转布尔值"></a>任意数据类型转布尔值</h5><ul>
 <li><code>Boolean(x)</code>函数可以将任意类型的值转为布尔值.</li>
 <li><code>!!x</code><br>五个falsy值转换结果为false，其他的值全部为true。<br><code>0</code>         <code>NaN</code>        <code>&#39;&#39;</code>         <code>null</code>           <code>undefined</code>     <blockquote>
-<p>falsy是在Boolean上下文中认定可转换为false的值。JavaScript在需要用到布尔类型的上下文中使用强制类型转换（Type  Conversion）将值转换为布尔值，比如：在条件语句或循环语句中<br>注意，所有对象（包括空对象）的转换结果都是true，甚至连false对应的布尔对象new Boolean(false)也是true。</p>
+<p>falsy是在Boolean上下文中认定可转换为false的值。JavaScript在需要用到布尔类型的上下文中使用强制类型转换（Type  Conversion）将值转换为布尔值，比如：在条件语句或循环语句中</p>
 </blockquote>
 </li>
 </ul>
+<p>注意，所有对象（包括空对象）的转换结果都是true，甚至连false对应的布尔对象new Boolean(false)也是true。</p>
 <hr>
 <h4 id="数据类型的相互转换-自动转换"><a href="#数据类型的相互转换-自动转换" class="headerlink" title="数据类型的相互转换(自动转换)"></a>数据类型的相互转换(自动转换)</h4><p>到以下三种情况时，JavaScript 会自动转换数据类型，即转换是自动完成的，用户不可见。<br>第一种情况，不同类型的数据互相运算。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">123 + &apos;abc&apos; // &quot;123abc&quot;</span><br></pre></td></tr></table></figure></p>
 <p>第二种情况，对非布尔值类型的数据求布尔值。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">if (&apos;abc&apos;) &#123;</span><br><span class="line">  console.log(&apos;hello&apos;)</span><br><span class="line">&#125;  // &quot;hello&quot;</span><br></pre></td></tr></table></figure></p>
 <p>第三种情况，对非数值类型的值使用一元运算符（即+和-）。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">+ &#123;foo: &apos;bar&apos;&#125; // NaN</span><br><span class="line">- [1, 2, 3] // NaN</span><br></pre></td></tr></table></figure></p>
 <p>自动转换的规则是这样的：预期什么类型的值，就调用该类型的转换函数。比如，某个位置预期为字符串，就调用String函数进行转换。如果该位置即可以是字符串，也可能是数值，那么默认转为数值。</p>
 <p>由于自动转换具有不确定性，而且不易除错，建议在预期为布尔值、数值、字符串的地方，全部使用Boolean、Number和String函数进行显式转换。</p>
-<h4 id="内存图"><a href="#内存图" class="headerlink" title="内存图"></a>内存图</h4><ul>
-<li>你买一个 <a href="https://item.jd.com/4071422.html" title="null" target="_blank" rel="noopener">8G 的内存条</a></li>
-<li>操作系统开机即占用 512MB</li>
-<li>Chrome 打开即占用 1G 内存</li>
-<li>Chrome 各每个网页分配一定数量的内存</li>
-<li>这些内存要分给页面渲染器、网络模块、浏览器外壳和 JS 引擎（V8引擎）</li>
-<li>JS 引擎将内存分为代码区和数据区</li>
-<li>我们只研究数据区</li>
-<li>数据区分为 Stack（栈内存） 和 Heap（堆内存）</li>
-<li>简单类型的数据直接存在 Stack 里</li>
-<li>复杂类型的数据是把 Heap 地址存在 Stack 里<br>遇到问题尽量画图分析。</li>
-</ul>
-<hr>
-<p>如果将复杂数据类型存放在栈内存里面，那么向其中添加数据就很麻烦、其中一些数据就需要向后面移动。只需要在栈内存中给代表复杂数据类型（对象）的变量存放一个地址（没有指针，是引用）指向堆内存中的数据。一个变量等于另一个复杂数据类型，就把地址复制给它。<br>所有的变量和对象都是引用关系。</p>
-<h5 id="4个常见的面试题"><a href="#4个常见的面试题" class="headerlink" title="4个常见的面试题"></a>4个常见的面试题</h5><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = <span class="number">1</span></span><br><span class="line"><span class="keyword">var</span> b = a</span><br><span class="line">b = <span class="number">2</span></span><br><span class="line">请问 a 显示是几？  <span class="comment">//1</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = &#123;<span class="attr">name</span>: <span class="string">'a'</span>&#125;</span><br><span class="line"><span class="keyword">var</span> b = a</span><br><span class="line">b = &#123;<span class="attr">name</span>: <span class="string">'b'</span>&#125;</span><br><span class="line">请问现在 a.name 是多少？<span class="comment">//'a'</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = &#123;<span class="attr">name</span>: <span class="string">'a'</span>&#125;</span><br><span class="line"><span class="keyword">var</span> b = a</span><br><span class="line">b.name = <span class="string">'b'</span></span><br><span class="line">请问现在 a.name 是多少？<span class="comment">//'b'</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = &#123;<span class="attr">name</span>: <span class="string">'a'</span>&#125;</span><br><span class="line"><span class="keyword">var</span> b = a</span><br><span class="line">b = <span class="literal">null</span></span><br><span class="line">请问现在 a 是什么？<span class="comment">//&#123;name: 'a'&#125;</span></span><br></pre></td></tr></table></figure>
-<h5 id="垃圾回收机制"><a href="#垃圾回收机制" class="headerlink" title="垃圾回收机制"></a>垃圾回收机制</h5><p><strong>GC 垃圾回收</strong> <strong>如果一个对象没有被引用，那么它就是垃圾，将会被回收。</strong><br>引用包括事件触发引用，如果一个函数被页面上的事件引用了，也不会算作垃圾被回收。<br>解决办法：将事件赋值null，就表示不再引用。<br><strong>IE6 BUG</strong>  无法正常的在页面关闭时，将没有人引用的垃圾正常的清除。设置window.onunload事件，将所有的事件都设置为null。<br><strong>内存泄露</strong>：表示该被标记为垃圾的数据没有被标记，内存就会被永久的占用。除非把整个浏览器关闭，否则浏览器就会吃很多的内存，无法再分配新的内存用于存储数据。</p>
-<blockquote>
-<p>程序中己动态分配的堆内存由于某种原因程序未释放或无法释放，造成系统内存的浪费，导致程序运行速度减慢甚至系统崩溃等严重后果.</p>
-</blockquote>
-<h5 id="深复制是什么鬼"><a href="#深复制是什么鬼" class="headerlink" title="深复制是什么鬼"></a>深复制是什么鬼</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var a = 1</span><br><span class="line">var b = a</span><br><span class="line">b = 2 //这个时候改变 b</span><br></pre></td></tr></table></figure>
-<p>a 完全不受 b 的影响<br>那么我们就说这是一个深复制<br>对于简单类型的数据来说，赋值就是深拷贝。<br>对于复杂类型的数据（对象）来说，才要区分浅拷贝和深拷贝。</p>
-<p>这是一个浅拷贝的例子<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var a = &#123;name: &apos;frank&apos;&#125;</span><br><span class="line">var b = a</span><br><span class="line">b.name = &apos;b&apos;</span><br><span class="line">a.name === &apos;b&apos; // true</span><br></pre></td></tr></table></figure></p>
-<p>因为我们对 b 操作后，a 也变了</p>
-<p>什么是深拷贝了，就是对 Heap 内存进行完全的拷贝。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var a = &#123;name: &apos;frank&apos;&#125;</span><br><span class="line">var b = deepClone(a) // deepClone 还不知道怎么实现</span><br><span class="line">b.name = &apos;b&apos;</span><br><span class="line">a.name === &apos;a&apos; // true</span><br></pre></td></tr></table></figure></p>
-<p>对于基本类型变量，简单的赋值就是深拷贝。改变一个变量，不影响赋值的变量，两者互不干扰。对于深浅拷贝，一般只讨论复杂数据类型。<br>复杂类型变量，a等于b，a改变导致b也会改变，这就是浅拷贝。因为只是将stack里面的地址复制了一份而已。复杂数据类型的深拷贝，会拷贝堆内存里面的数据，包括数据内的引用，将不再引用同一个地址，而是引用新拷贝的数据的地址。</p>
 
       
     </div>
@@ -585,10 +558,6 @@
             <a href="/tags/前端/" rel="tag"><i class="fa fa-tag"></i> 前端</a>
           
             <a href="/tags/数据类型转换/" rel="tag"><i class="fa fa-tag"></i> 数据类型转换</a>
-          
-            <a href="/tags/垃圾回收机制/" rel="tag"><i class="fa fa-tag"></i> 垃圾回收机制</a>
-          
-            <a href="/tags/深浅拷贝/" rel="tag"><i class="fa fa-tag"></i> 深浅拷贝</a>
           
         </div>
       
@@ -645,6 +614,11 @@
           
 
   
+    <div class="comments" id="comments">
+      <div id="lv-container" data-id="city" data-uid="MTAyMC8zOTcyMy8xNjI1MA"></div>
+    </div>
+
+  
 
 
 
@@ -684,7 +658,7 @@
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
               <img class="site-author-image" itemprop="image"
-                src="/images/1.png"
+                src="/images/IMG_0517.jpg"
                 alt="Hide on bush" />
             
               <p class="site-author-name" itemprop="name">Hide on bush</p>
@@ -720,7 +694,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">9</span>
+                  <span class="site-state-item-count">6</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -811,7 +785,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#数据类型的相互转换-强制转换"><span class="nav-number">1.</span> <span class="nav-text">数据类型的相互转换(强制转换)</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#任意数据类型转字符串"><span class="nav-number">1.1.</span> <span class="nav-text">任意数据类型转字符串</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#任意数据类型转数字"><span class="nav-number">1.2.</span> <span class="nav-text">任意数据类型转数字</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#任意数据类型转布尔值"><span class="nav-number">1.3.</span> <span class="nav-text">任意数据类型转布尔值</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#数据类型的相互转换-自动转换"><span class="nav-number">2.</span> <span class="nav-text">数据类型的相互转换(自动转换)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#内存图"><span class="nav-number">3.</span> <span class="nav-text">内存图</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#4个常见的面试题"><span class="nav-number">3.1.</span> <span class="nav-text">4个常见的面试题</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#垃圾回收机制"><span class="nav-number">3.2.</span> <span class="nav-text">垃圾回收机制</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#深复制是什么鬼"><span class="nav-number">3.3.</span> <span class="nav-text">深复制是什么鬼</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#数据类型的相互转换-强制转换"><span class="nav-number">1.</span> <span class="nav-text">数据类型的相互转换(强制转换)</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#任意数据类型转字符串"><span class="nav-number">1.1.</span> <span class="nav-text">任意数据类型转字符串</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#任意数据类型转数字"><span class="nav-number">1.2.</span> <span class="nav-text">任意数据类型转数字</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#任意数据类型转布尔值"><span class="nav-number">1.3.</span> <span class="nav-text">任意数据类型转布尔值</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#数据类型的相互转换-自动转换"><span class="nav-number">2.</span> <span class="nav-text">数据类型的相互转换(自动转换)</span></a></li></ol></div>
             
 
           </div>
@@ -845,7 +819,7 @@
     
       <span class="post-meta-item-text">博客全站字数&#58;</span>
     
-    <span title="博客全站字数">4.2k</span>
+    <span title="博客全站字数">3.3k</span>
   
 </div>
 
@@ -913,8 +887,6 @@
   
 
 
-  
-
 
 
 
@@ -953,11 +925,6 @@
   
   
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
   
 
 
@@ -1006,6 +973,17 @@
 
 
 
+  
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
   
 
 
