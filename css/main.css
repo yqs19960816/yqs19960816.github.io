@@ -1851,7 +1851,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #2dffc3;
+  background: #0482de;
 }
 .site-author-image {
   display: block;
@@ -1998,7 +1998,7 @@ img:hover {
   cursor: pointer;
   border-bottom: 1px solid transparent;
   font-size: 14px;
-  color: #c678dd;
+  color: #555;
 }
 .sidebar-nav li:hover {
   color: #fc6423;
@@ -3169,7 +3169,17 @@ img:hover {
   bottom: 10px;
 }
 .site-author-name {
-  display: none;
+  font-size: 16px;
+  color: #000;
+  font-weight: 700;
+  margin: 0px;
+  text-align: center;
+}
+.site-description {
+  margin-top: 0;
+  text-align: center;
+  font-size: 13px;
+  color: #999;
 }
 .site-state {
   line-height: 1.3;
