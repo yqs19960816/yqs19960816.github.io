@@ -1851,7 +1851,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #4570ba;
+  background: #70ff7a;
 }
 .site-author-image {
   display: block;
@@ -3163,7 +3163,10 @@ img:hover {
   margin-bottom: 40px;
 }
 .posts-expand .post-tags a:hover {
-  background: #eee;
+  color: #fc6423;
+}
+.posts-expand .post-tags a {
+  color: #0593d3;
 }
 .back-to-top.back-to-top-on {
   bottom: 10px;
